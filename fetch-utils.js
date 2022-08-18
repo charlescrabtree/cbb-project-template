@@ -54,3 +54,13 @@ export async function createPost(post) {
     return await client.from('posts').insert(post);
 }
 
+export async function displayPost(id) {
+    const response = await client
+        .from('posts')
+        .select()
+        .match({ id })
+        .single();
+    console.log('display post');
+    return checkError(response);
+
+}
