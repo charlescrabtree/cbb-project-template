@@ -64,3 +64,12 @@ export async function displayPost(id) {
     return checkError(response);
 
 }
+
+export async function deletePost(id) {
+    const response = await client
+        .from('posts')
+        .delete()
+        .match({ id });
+
+    return checkError(response);
+}
