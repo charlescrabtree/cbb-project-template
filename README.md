@@ -27,3 +27,24 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
     1. From "sql editor", new script and run starter schema `db/schema.sql`
     1. From "sql editor", new script and run starter category data `db/categories.sql`
     1. From "settings > api", copy URL and Key into `fetch-utils.js`
+
+### My set up steps
+
+Steps:
+
+1. create post folder with index.html and post.js
+
+2. design out index.html
+
+3. make post.js functional and "dynamic"
+
+4. create and export new function from fetch-utils.js (displayPost) make sure it does the same as getPosts
+but limited to one id (use.match or .eq). Also export one row .single()
+
+5. use const user = checkAuth(); to authenticate user
+
+6. create delete button based on user_id aka auth.uid() = user_id
+
+7. create and export new function from fetch-utils.js that deletes a post (by post id)
+
+8. import and use on delete button click, then navigate back to home page ../
