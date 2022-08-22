@@ -41,3 +41,20 @@ export function renderPosts(posts) {
 
     return fragment;
 }
+
+export function renderProfile(profile) {
+    const profileEl = document.createElement('div');
+
+    const nameEl = document.createElement('h3');
+    nameEl.textContent = profile.user_name;
+
+    const bioEl = document.createElement('p');
+    bioEl.textContent = profile.bio;
+
+    const avatarEl = document.createElement('p');
+    avatarEl.textContent = profile.avatar_url;
+
+    profileEl.append(nameEl, avatarEl, bioEl);
+
+    return profileEl;
+}
