@@ -46,7 +46,7 @@ export function renderProfile(profile) {
     const profileEl = document.createElement('div');
 
     const nameEl = document.createElement('h3');
-    nameEl.textContent = profile.name;
+    nameEl.textContent = profile.user_name;
 
     const bioEl = document.createElement('p');
     bioEl.textContent = profile.bio;
